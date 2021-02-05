@@ -13,7 +13,7 @@ public class offer16 {
      */
     public double myPow(double x, int n) {
         if(n>0) return F(x,n);
-        else if(n<0) return F(x,-n);
+        else if(n<0) return 1/F(x,-n);
         else return 1;
     }
     private double F(double x,int n){

@@ -1,6 +1,6 @@
 package su;
 
-import java.util.Stack;
+import java.util.*;
 
 /**
  * 栈的压入、弹出序列
@@ -29,4 +29,6 @@ public class offer31 {
         //如果栈空了 代表popped是正确的 即所有元素可按该序列出栈
         return stack.isEmpty();
     }
+
+
 }

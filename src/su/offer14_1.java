@@ -56,7 +56,7 @@ public class offer14_1 {
         //如i为2时 代表第一段长度为2 那么剩余部分该如何剪 通过递归得出 递归时会穷举当前第一段为2时 剩余部分所有剪的情形
         //i为3时 再递归穷举当前第一段为3时 剩余部分所有剪的情形  并和第一段为2时的最大乘积做对比
         for(int i = 2; i < n; i++){
-            rs = Math.max(rs, Math.max(i * cuttingRope(n-i), i * (n-i)));
+            rs = Math.max(rs, Math.max(i * cuttingRope2(n-i), i * (n-i)));
         }
         return rs;
     }

@@ -18,4 +18,5 @@ public class offer14_2 {
         return (int)(rs*n%1000000007);
     }
 
+
 }

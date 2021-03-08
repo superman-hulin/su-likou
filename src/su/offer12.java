@@ -36,4 +36,32 @@ public class offer12 {
         board[i][j]=words[k];
         return rs;
     }
+
+    public int movingCount(int m, int n, int k) {
+        boolean[][] visted=new boolean[m][n];
+       return dfs(m,n,k,0,0,visted);
+    }
+    public int dfs(int m,int n,int k,int i,int j,boolean[][] visted){
+        if(i>=m||j>=n||(sum(i)+sum(j))>k||visted[i][j]==true) return 0;
+        visted[i][j]=true;
+        return 1+ dfs(m, n,k,i+1,j,visted)+dfs(m, n,k,i,j+1,visted);
+    }
+    int sum(int i){
+        int sum=0;
+        while (i>0){
+           sum+=i%10;
+           i=i/10;
+        }
+        return sum;
+    }
+
+    public int cuttingRope(int n) {
+        if(n<4) return n-1;
+        int rs=1;
+        while (n>4){
+            rs=(rs*3)%1000000007;
+            n-=3;
+        }
+        return (rs*n)%1000000007;
+    }
 }
